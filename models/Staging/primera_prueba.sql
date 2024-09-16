@@ -19,7 +19,7 @@ with source_data as (
 */
 {{ config(materialized='table') }}
 select *
-FROM `voltaic-mode-426821-f4.Prueba_az7.az7`
+FROM {{ source("raw", "az7") }}
 where SECUENCIA > '10'
 
 /*
