@@ -1,0 +1,7 @@
+version: 2
+sources:
+  - name: raw
+    schema: Prueba_az7 #Dataset name - BigQuery
+    tables:
+      - name: az7
+      - name: operador_extract

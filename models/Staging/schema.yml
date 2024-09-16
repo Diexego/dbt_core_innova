@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: primera_prueba
+    description: "un ejemplo de primera prueba"
+    columns:
+      - name: secuencia
+        description: "prueba de secuencia"
+        tests:
+          - unique
+          - not_null
+
+  - name: segunda_prueba
+    description: "un ejemplo de la segunda prueba"
+    columns:
+      - name: secuencia
+        description: "prueba de secuencia"
+        tests:
+          - unique
+          - not_null
+          
+  - name: prueba_ecc
+    description: "primera prueba de CCA - operador"
+    columns:
+      - name: NRO_SECUENCIA
+        description: "prueba de NRO_SECUENCIA"
+        tests:
+          - unique
+          - not_null
+
+  - name: relacion_az7_operador
+    description: "primera prueba de join CCA - az7"
+    columns:
+      - name: NRO_SECUENCIA
+        description: "prueba de NRO_SECUENCIA = SECUENCIA"
+        tests:
+          - unique
+          - not_null
+      - name: SECUENCIA
+        description: "prueba de NRO_SECUENCIA = SECUENCIA"
+        data_test:
+          - unique
+          - not_null
